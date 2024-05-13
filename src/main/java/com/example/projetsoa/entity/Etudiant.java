@@ -1,12 +1,10 @@
 package com.example.projetsoa.entity;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Builder;
-
 
 @Builder
 @Entity
@@ -18,6 +16,9 @@ public class Etudiant {
     private String nom;
     private String prenom;
     private String classe;
+
+    public Etudiant() {
+    }
 
     public Etudiant(String nom, String prenom, String classe) {
         this.nom = nom;
@@ -31,11 +32,6 @@ public class Etudiant {
         this.prenom = prenom;
         this.classe = classe;
     }
-
-    public Etudiant() {
-
-    }
-
 
     public Long getId() {
         return id;
@@ -69,4 +65,3 @@ public class Etudiant {
         this.classe = classe;
     }
 }
-
